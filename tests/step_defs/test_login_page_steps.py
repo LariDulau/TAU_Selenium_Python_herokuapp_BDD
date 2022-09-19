@@ -13,16 +13,16 @@ def open_page(browser):
     login_page.load_page()
 
 
-@when("the user type username 'tomsmith'")
-def insert_username(browser):
-    login_page = LoginPage(browser)
-    login_page.insert_username('tomsmith')
-
-
-@when("the user type password 'SuperSecretPassword!'")
-def insert_password(browser):
-    login_page = LoginPage(browser)
-    login_page.insert_password('SuperSecretPassword!')
+# @when("the user type username 'tomsmith'")
+# def insert_username(browser):
+#     login_page = LoginPage(browser)
+#     login_page.insert_username('tomsmith')
+#
+#
+# @when("the user type password 'SuperSecretPassword!'")
+# def insert_password(browser):
+#     login_page = LoginPage(browser)
+#     login_page.insert_password('SuperSecretPassword!')
 
 
 @when('the user click login button')

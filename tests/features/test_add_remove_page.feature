@@ -27,6 +27,13 @@ Feature: Test add remove functionality
     Then no more delete button on the page
 
 
+  Scenario: Test add and delete functionality
+    Given open the page
+    Then check add functionality
+    And check delete functionality
+
+
+
 
 
 

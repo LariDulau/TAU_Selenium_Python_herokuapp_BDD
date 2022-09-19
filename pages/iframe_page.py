@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class IFramePage:
     IFRAME_TITLE = (By.CSS_SELECTOR, 'h3')
-    IFRAME = (By.CLASS_NAME, "tox-edit-area__iframe")
+    IFRAME = (By.CSS_SELECTOR, "[class='tox-edit-area__iframe']")
     EDIT_SECTION = (By.CLASS_NAME, "mce-content-body")
     TEXT_FROM_EDIT = (By.CSS_SELECTOR, ".mce-content-body > p")
     BOLD = (By.CSS_SELECTOR, "[title = 'Bold']")

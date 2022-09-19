@@ -1,4 +1,4 @@
-from pytest_bdd import scenarios, given, when, then
+from pytest_bdd import scenarios, given, when, then, parsers
 from pages.add_remove_elements_page import AddRemoveElementsPage
 
 scenarios('../features/test_add_remove_page.feature')
@@ -69,3 +69,19 @@ def check_delete_button(browser):
 def check_delete_button_zero(browser):
     add_remove_page = AddRemoveElementsPage(browser)
     assert add_remove_page.get_number_of_delete_button() == 0
+
+
+@then('check add functionality')
+def check_add_functionality(browser):
+    add_remove_page = AddRemoveElementsPage(browser)
+    for i in range(10):
+        add_remove_page.click_add_button()
+        assert add_remove_page.get_number_of_delete_button() == (i+1)
+
+
+@then('check delete functionality')
+def check_delete_functionality(browser):
+    add_remove_page = AddRemoveElementsPage(browser)
+    for i in range(10):
+        add_remove_page.click_first_delete_button()
+        assert add_remove_page.get_number_of_delete_button() == (10-i-1)
