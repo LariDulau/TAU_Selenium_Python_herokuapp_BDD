@@ -27,9 +27,6 @@ class IFramePage:
         self.browser.find_element(*self.EDIT_SECTION).send_keys(text)
 
     def get_text(self):
-        iframe = self.browser.find_element(*self.IFRAME)
-        self.browser.switch_to.frame(iframe)
-        self.browser.find_element(*self.EDIT_SECTION).clear()
         return self.browser.find_element(*self.TEXT_FROM_EDIT).text
 
     def get_url(self):
